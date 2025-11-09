@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TOP PROCESS S.R.L. — Instalación de equipamiento edilicio y coordinación MEP</title>
+  <meta name="description" content="Ingeniería de detalle, provisión e instalación de equipamiento edilicio. Coordinación MEP, tableros, bombeo, HVAC y commissioning para obras en el AMBA." />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="color-scheme" content="light dark" />
+  <!--
+    Empresa: TOP PROCESS S.R.L.
+    Dirección: GENERAL MARIA PAZ 515 1842 Monte Grande
+    Correo: info@topprocess.org
+    Sectores: Building Equipment Contractors; Architectural, Engineering, and Related Services;
+             Specialty Trade Contractors; Construction; Instalación de equipamiento edilicio.
+    Cumplimiento:
+      - Sin campo de teléfono en formularios (alineado con revisión de Apple).
+      - Etiquetas accesibles, aria-roles, confirmación de envío sin almacenar datos.
+      - Sin rastreos ni cookies; sólo UI estática con envío simulado.
+  -->
+  <style>
+    :root{
+      --bg:#0e1a14;
+      --panel:#0f2a20;
+      --paper:#ffffff;
+      --ink:#0a0e0c;
+      --muted:#5e746a;
+      --brand:#1f9d65;
+      --brand-2:#0e7a4d;
+      --ring: rgba(31,157,101,.24);
+      --card:#f5f8f6;
+      --soft:#ecf5f0;
+      --shadow: 0 10px 30px rgba(0,0,0,.14);
+      --radius:18px;
+    }
+
+    /* Reset y accesibilidad */
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;scroll-behavior:smooth}
+    body{
+      font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#e7f3ec, #f7fbf9);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    img{max-width:100%;display:block;border-radius:14px}
+    a{color:var(--brand);text-decoration:none}
+    a:focus, button:focus, input:focus, textarea:focus{outline:2px solid var(--brand); outline-offset:2px}
+    .container{max-width:1160px;margin:auto;padding:0 24px}
+
+    /* Encabezado */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:#ffffffcc; backdrop-filter:saturate(180%) blur(10px);
+      border-bottom:1px solid #e5efe9;
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+    .brand-badge{
+      width:40px; height:40px; border-radius:12px;
+      background:conic-gradient(from 120deg, var(--brand), var(--brand-2));
+      display:grid; place-items:center; color:white; font-weight:900;
+      box-shadow:var(--shadow)
+    }
+    .menu{display:flex; gap:18px; flex-wrap:wrap}
+    .menu a{padding:10px 14px; border-radius:999px; color:#0a0e0c; font-weight:600}
+    .menu a:hover{background:var(--soft)}
+    .cta{
+      padding:10px 16px; border-radius:999px; border:1px solid var(--brand);
+      color:white; background:linear-gradient(180deg,var(--brand),var(--brand-2));
+      box-shadow:0 6px 18px var(--ring);
+    }
+    .cta:hover{filter:saturate(110%)}
+
+    /* Hero */
+    .hero{
+      position:relative; overflow:hidden;
+      color:white;
+      background:
+        linear-gradient(180deg, rgba(14,26,20,.65), rgba(14,26,20,.65)),
+        url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1800&auto=format&fit=crop') center/cover no-repeat;
+    }
+    .hero-inner{padding:120px 0}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      background:#ffffff22; padding:6px 12px; border-radius:999px; font-weight:700
+    }
+    .hero h1{
+      font-size:clamp(32px,6vw,52px); margin:16px 0 10px; line-height:1.1;
+      text-shadow:0 6px 24px rgba(0,0,0,.35)
+    }
+    .hero p{max-width:760px; font-size:clamp(16px,2.6vw,20px); color:#f0fff7}
+    .hero-actions{display:flex; gap:12px; margin-top:20px; flex-wrap:wrap}
+    .btn{
+      padding:12px 18px; border-radius:999px; border:1px solid transparent;
+      font-weight:700; transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+      background:white; color:#0a0e0c;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn.alt{background:transparent; color:white; border-color:#ffffff66}
+    .btn.alt:hover{background:#ffffff10}
+
+    /* Secciones */
+    section{padding:70px 0}
+    .section-head{margin-bottom:28px}
+    .eyebrow{
+      display:inline-flex; align-items:center; gap:8px; color:var(--brand);
+      font-weight:800; text-transform:uppercase; letter-spacing:.2em
+    }
+    .section-title{font-size:clamp(26px,4.6vw,36px); margin:10px 0 8px}
+    .section-copy{color:#33423a; max-width:760px}
+
+    /* Tarjetas de servicios: auto-fit garantiza filas completas sin «huecos» */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:18px; margin-top:18px
+    }
+    .card{
+      background:white; border-radius:var(--radius);
+      padding:16px; box-shadow:var(--shadow); display:flex; flex-direction:column
+    }
+    .card .thumb{height:190px; background:#d8e6df; border-radius:14px; overflow:hidden}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center; font-weight:700;
+      background:var(--soft); padding:8px 12px; border-radius:999px; margin-top:-22px; position:relative;
+      box-shadow:0 6px 16px rgba(0,0,0,.08)
+    }
+    .card h3{margin:12px 0 6px}
+    .card p{color:#42544b; margin-bottom:0}
+
+    /* Bloque oscuro “por qué elegirnos” — исправлено: сетка auto-fit + центрирование */
+    .why{
+      background:var(--panel); color:#eaf6f0; border-radius:22px; margin:20px 0;
+      padding:60px 28px; position:relative; overflow:hidden
+    }
+    .why .section-copy{color:#cfe6dc}
+    .why .benefits{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px; margin-top:24px; align-items:stretch; justify-items:stretch
+    }
+    .benefit{background:#123427; border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    .benefit h4{margin:8px 0 6px; color:#f3fff9}
+    .benefit p{color:#cfe6dc}
+
+    /* Proceso */
+    .process{
+      background:linear-gradient(180deg,#f4fbf7,#ecf5f0);
+      border:1px solid #e1efe7; border-radius:22px; padding:28px
+    }
+    .stages{
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px; margin-top:12px
+    }
+    .stage{
+      background:white; border-radius:18px; padding:18px; position:relative; box-shadow:var(--shadow)
+    }
+    .stage:after{
+      content:""; position:absolute; right:14px; bottom:14px;
+      width:14px; height:14px; border-radius:999px; background:var(--brand); box-shadow:0 0 0 6px var(--ring)
+    }
+    .stage h5{margin:8px 0 6px}
+    .stage p{color:#42544b}
+
+    /* Soluciones ampliadas */
+    .solutions .sol{
+      background:white; border-radius:18px; padding:18px; box-shadow:var(--shadow)
+    }
+    .solutions{display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:18px}
+
+    /* Galería */
+    .gallery{
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px; margin-top:8px
+    }
+
+    /* Contacto y pie */
+    .contact-cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+    footer{background:var(--bg); color:#c9e0d6; padding:40px 0; margin-top:60px}
+    .meta{color:#a7c2b7}
+
+    /* Modales */
+    .modal{
+      position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+      background:rgba(10,14,12,.55); backdrop-filter:blur(6px); z-index:1000
+    }
+    .modal[aria-hidden="false"]{display:flex}
+    .dialog{
+      width:min(680px,92vw); background:white; border-radius:20px; box-shadow:var(--shadow); padding:20px
+    }
+    .dialog h3{margin-top:0}
+    .dialog .close{
+      appearance:none; border:none; background:transparent; font-weight:900; font-size:18px; float:right; cursor:pointer
+    }
+
+    /* Form */
+    form{display:grid; gap:12px}
+    label{font-weight:700}
+    input, textarea{
+      width:100%; border-radius:12px; border:1px solid #dbe9e2; padding:12px 14px;
+      font:inherit; background:#fbfdfc
+    }
+    textarea{min-height:120px; resize:vertical}
+    .consent{
+      display:flex; gap:10px; align-items:flex-start; background:#f5fbf8; padding:10px; border-radius:12px; border:1px solid #e2eee8
+    }
+    .submit{
+      appearance:none; border:1px solid var(--brand); background:linear-gradient(180deg,var(--brand),var(--brand-2));
+      color:white; border-radius:999px; padding:12px 18px; font-weight:800; cursor:pointer;
+      box-shadow:0 8px 22px var(--ring)
+    }
+    .submit[disabled]{opacity:.7; cursor:not-allowed}
+    .helper{color:#5a6c63; font-size:.95rem}
+
+    .sr-only{
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0
+    }
+
+    /* Ajustes responsivos finos */
+    @media (min-width: 1120px){
+      /* En pantallas grandes, tres columnas exactas para el bloque oscuro */
+      .why .benefits{grid-template-columns:repeat(3, 1fr)}
+    }
+    @media (max-width: 640px){
+      .menu{display:none}
+      .stage:after{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <header role="banner">
+    <div class="container nav" role="navigation" aria-label="Principal">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true">TP</div>
+        <span>TOP PROCESS S.R.L.</span>
+      </div>
+      <nav class="menu" aria-label="Menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Quiénes somos</a>
+        <a href="#servicios">Soluciones clave</a>
+        <a href="#eleccion">Motivos para elegirnos</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#contacto" class="cta">Escribinos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero" role="region" aria-label="Bienvenida">
+    <div class="container hero-inner">
+      <span class="kicker" aria-label="Rubro y alcance">
+        Ingeniería aplicada a edificios • Instalaciones con garantía de desempeño
+      </span>
+      <h1>Equipamiento edilicio instalado con precisión, eficiencia y seguridad</h1>
+      <p>
+        Convertimos documentación en sistemas reales que funcionan: climatización, bombeo, tableros, automatización y coordinación MEP.
+        Planificamos la obra, ejecutamos con orden y entregamos con pruebas y documentación de cierre.
+      </p>
+      <div class="hero-actions" role="group" aria-label="Acciones">
+        <a class="btn" href="#servicios">Explorar soluciones</a>
+        <button class="btn alt" data-open-modal="contact">Empezar una consulta</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre nosotros -->
+  <section id="sobre" role="region" aria-label="Acerca de la empresa">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Quiénes somos</div>
+        <h2 class="section-title">Equipo técnico que transforma planos en sistemas confiables</h2>
+        <p class="section-copy">
+          En TOP PROCESS S.R.L. unimos ingeniería de detalle, provisión e instalación de equipamiento crítico para edificios.
+          Trabajamos con coordinación MEP y revisión técnica temprana para prevenir interferencias y retrabajos.
+          Nuestras instalaciones llegan con protocolos de calidad, ensayos documentados y plan de mantenimiento.
+          Operamos en el AMBA con logística propia y proveedores certificados para pruebas y puesta en marcha.
+          Cada proyecto prioriza seguridad, trazabilidad de materiales y documentación clara para operación y auditorías.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios principales -->
+  <section id="servicios" role="region" aria-label="Servicios principales">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Soluciones clave</div>
+        <h2 class="section-title">Instalamos, probamos y entregamos en condiciones</h2>
+        <p class="section-copy">Tres líneas de trabajo que cubren el corazón técnico de un edificio, integradas desde la ingeniería a la puesta en marcha.</p>
+      </div>
+
+      <div class="cards" role="list">
+        <!-- Servicio HVAC -->
+        <article class="card" role="listitem">
+          <div class="thumb">
+            <img alt="Montaje de equipo de climatización sobre estructura metálica"
+                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1400&auto=format&fit=crop" />
+          </div>
+          <div class="pill" aria-label="Etiqueta de servicio">
+            HVAC • Balanceo
+          </div>
+          <h3>Climatización central y distribución</h3>
+          <p>
+            Ingeniería de detalle para chillers, UTAs y fan coils con redes de conductos y cañerías aisladas.
+            Puesta a punto con mediciones de caudal, planillas de balanceo y manual de mantenimiento entregado al cierre.
+            Integración con BMS para control y alarmas.
+          </p>
+        </article>
+
+        <!-- Servicio Eléctrico y Bombeo -->
+        <article class="card" role="listitem">
+          <div class="thumb">
+            <img alt="Tablero eléctrico con canalizaciones ordenadas"
+                 src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?q=80&w=1400&auto=format&fit=crop" />
+          </div>
+          <div class="pill">Fuerza motriz • Control</div>
+          <h3>Tableros, bombeo y automatización</h3>
+          <p>
+            Montaje de tableros generales y seccionales con protecciones selectivas, variadores y enclavamientos.
+            Sistemas de presurización y bombeo con sensado y control PID.
+            Pruebas funcionales documentadas para operación segura y eficiente.
+          </p>
+        </article>
+
+        <!-- Servicio Coordinación y Comisionado -->
+        <article class="card" role="listitem">
+          <div class="thumb">
+            <img alt="Coordinación MEP con notebook en obra"
+                 src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1400&auto=format&fit=crop" />
+          </div>
+          <div class="pill">BIM • Commissioning</div>
+          <h3>Coordinación MEP y commissioning</h3>
+          <p>
+            Modelado y coordinación interdisciplinaria para evitar conflictos en obra.
+            Plan de pruebas, protocolos SAT y documentación as-built.
+            Transferencia al equipo de facilities con capacitación y manuales digitales.
+          </p>
+        </article>
+      </div>
+
+      <div class="contact-cta" role="group" aria-label="Atajos">
+        <button class="btn" data-open-modal="contact">Pedir una cotización orientativa</button>
+        <a class="btn alt" href="#contacto">Datos de contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Motivos para elegirnos (bloque oscuro, сетка исправлена) -->
+  <section id="eleccion" role="region" aria-label="Motivos para elegirnos">
+  <div class="container">
+    <div class="why">
+        <div class="eyebrow">Motivos para elegirnos</div>
+        <h2 class="section-title">Obra prolija, documentación completa, sistemas estables</h2>
+        <p class="section-copy">
+          Nuestro diferencial está en la preparación: revisión técnica previa, logística planificada y supervisión en sitio.
+          Eso reduce retrabajos, acelera la puesta en marcha y deja respaldo documental para operación y auditorías.
+        </p>
+      </div>
+      <div class="benefits" role="list">
+        <div class="benefit" role="listitem">
+          <h4>Calidad medible</h4>
+          <p>Protocolos de ensayo, informes de balanceo y matrices de conformidad firmadas. Cada equipo queda trazado por serie y hoja de vida.</p>
+        </div>
+        <div class="benefit" role="listitem">
+          <h4>Planificación que ordena</h4>
+          <p>Secuencias de montaje coordinadas con otras disciplinas, ventanas de trabajo claras y entregas parciales con hitos verificables.</p>
+        </div>
+        <div class="benefit" role="listitem">
+          <h4>Seguridad y prolijidad</h4>
+          <p>Control de EPP, señalización, limpieza diaria y retiro responsable de residuos. El sitio de obra queda transitable y seguro.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:22px">
+        <button class="btn" data-open-modal="contact">Hablemos del proyecto</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso de trabajo -->
+  <section id="proceso" role="region" aria-label="Cómo trabajamos">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Cómo trabajamos</div>
+        <h2 class="section-title">De la ingeniería a la entrega sin sobresaltos</h2>
+        <p class="section-copy">Un flujo claro para avanzar con ritmo constante y controlado.</p>
+      </div>
+
+      <div class="process">
+        <div class="stages" role="list">
+          <div class="stage" role="listitem" aria-labelledby="etapa-pre">
+            <h5 id="etapa-pre">Inicio</h5>
+            <p>Relevamiento del sitio, revisión de documentación, definición de alcance, entregables y plan de aprovisionamiento. Se habilitan canales de coordinación.</p>
+          </div>
+          <div class="stage" role="listitem" aria-labelledby="etapa-montaje">
+            <h5 id="etapa-montaje">Ejecución</h5>
+            <p>Montaje ordenado por frentes, controles de calidad, pruebas intermedias y registro fotográfico. Coordinación MEP para evitar interferencias.</p>
+          </div>
+          <div class="stage" role="listitem" aria-labelledby="etapa-cierre">
+            <h5 id="etapa-cierre">Entrega</h5>
+            <p>Commissioning, capacitación del personal, entrega de as-built y plan de mantenimiento. Queda un canal abierto para soporte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluciones ampliadas -->
+  <section role="region" aria-label="Soluciones específicas">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Soluciones a medida</div>
+        <h2 class="section-title">Cuando el proyecto lo pide, también respondemos así</h2>
+        <p class="section-copy">Integraciones especiales que suelen requerir coordinación temprana y pruebas dedicadas.</p>
+      </div>
+      <div class="solutions">
+        <article class="sol">
+          <h4>Salas técnicas llave en mano</h4>
+          <p>Diseño y construcción de salas de máquinas con bases, bandejas, soporte estructural, iluminación, ventilación y accesos seguros. Entrega lista para operar.</p>
+        </article>
+        <article class="sol">
+          <h4>Integración BMS y monitoreo</h4>
+          <p>Interconexión de sensores, actuadores y tableros al sistema de gestión de edificios. Lógica de alarmas, tendencias y paneles para operación eficiente.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section role="region" aria-label="Trabajos recientes">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Obras y montajes</div>
+        <h2 class="section-title">Un vistazo a lo que entregamos</h2>
+        <p class="section-copy">Selección de vistas representativas de montajes y terminaciones ordenadas en sitio.</p>
+      </div>
+      <div class="gallery" role="list">
+        <div role="listitem">
+          <img alt="Equipo trabajando en techo técnico con ductos"
+               src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop" />
+        </div>
+        <div role="listitem">
+          <img alt="Detalle de cañerías aisladas"
+               src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1200&auto=format&fit=crop" />
+        </div>
+        <div role="listitem">
+          <img alt="Tablero eléctrico con señalética clara"
+               src="main1.jpg" />
+        </div>
+        <div role="listitem">
+          <img alt="Área de oficinas con ductos a la vista"
+               src="main2.jpg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" role="region" aria-label="Contacto">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Contacto</div>
+        <h2 class="section-title">Hablemos del proyecto</h2>
+        <p class="section-copy">Escribinos desde el botón y respondemos con los próximos pasos. No solicitamos datos sensibles ni teléfonos.</p>
+      </div>
+      <div class="contact-cta">
+        <button class="btn" data-open-modal="contact">Abrir formulario de contacto</button>
+        <span class="helper" role="note">Al enviar, verás una confirmación en pantalla. No se guarda información en el navegador.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div><strong>TOP PROCESS S.R.L.</strong></div>
+      <div class="meta">GENERAL MARIA PAZ 515 1842 Monte Grande</div>
+      <div class="meta"><a href="mailto:info@topprocess.org">info@topprocess.org</a></div>
+      <p class="meta">Privacidad: la información enviada se usa sólo para responder tu consulta. Podés pedir su eliminación en cualquier momento escribiendo a nuestro correo.</p>
+    </div>
+  </footer>
+
+  <!-- Modal: Formulario -->
+  <div class="modal" id="modal-contact" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="form-title">
+    <div class="dialog">
+      <button class="close" aria-label="Cerrar" data-close-modal="contact">✕</button>
+      <h3 id="form-title">Escribinos tu consulta</h3>
+      <p class="helper">Completá el formulario. Responderemos por correo electrónico.</p>
+
+      <form id="contact-form" aria-describedby="form-helper">
+        <span id="form-helper" class="sr-only">El formulario no solicita teléfono, sólo correo y datos básicos del proyecto.</span>
+
+        <label for="nombre">Nombre y apellido</label>
+        <input id="nombre" name="nombre" autocomplete="name" required aria-required="true" placeholder="Tu nombre" />
+
+        <label for="empresa">Organización</label>
+        <input id="empresa" name="empresa" autocomplete="organization" placeholder="Nombre de tu empresa (opcional)" />
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-required="true" placeholder="tu@correo.com" />
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Contanos brevemente qué necesitás: equipamiento, obra, plazos, sitio…"></textarea>
+
+        <div class="consent">
+          <input id="consent" name="consent" type="checkbox" required aria-required="true" />
+          <label for="consent">
+            Acepto que TOP PROCESS S.R.L. utilice estos datos sólo para responder a mi consulta. Puedo solicitar su eliminación escribiendo a <a href="mailto:info@topprocess.org">info@topprocess.org</a>.
+          </label>
+        </div>
+
+        <button class="submit" id="send" type="submit">Enviar consulta</button>
+        <div id="live" class="sr-only" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Confirmación -->
+  <div class="modal" id="modal-ok" aria-hidden="true" role="alertdialog" aria-modal="true" aria-labelledby="ok-title">
+    <div class="dialog">
+      <button class="close" aria-label="Cerrar" data-close-modal="ok">✕</button>
+      <h3 id="ok-title">Consulta enviada</h3>
+      <p>Gracias por escribirnos. Registramos tu mensaje y te contactaremos al correo proporcionado.</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap">
+        <button class="btn" data-close-modal="ok">Volver al sitio</button>
+        <a class="btn alt" href="mailto:info@topprocess.org">Abrir mi correo</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Gestión de foco dentro del modal activo
+    function trapFocus(modal){
+      const focusables = modal.querySelectorAll('a[href], button, input, textarea, [tabindex]:not([tabindex="-1"])');
+      if(!focusables.length) return;
+      let first = focusables[0], last = focusables[focusables.length-1];
+      function loop(e){
+        const isTab = e.key === 'Tab' || e.keyCode === 9;
+        if(!isTab) return;
+        if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+        else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+      }
+      modal.addEventListener('keydown', loop);
+    }
+
+    // Referencias a modales
+    const contactModal = document.getElementById('modal-contact');
+    const okModal = document.getElementById('modal-ok');
+
+    // Apertura de modal de contacto
+    document.querySelectorAll('[data-open-modal="contact"]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        contactModal.setAttribute('aria-hidden','false');
+        const field = contactModal.querySelector('input, textarea, button');
+        if(field) field.focus();
+        trapFocus(contactModal);
+      });
+    });
+
+    // Cierres
+    document.querySelectorAll('[data-close-modal="contact"]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{ contactModal.setAttribute('aria-hidden','true'); });
+    });
+    document.querySelectorAll('[data-close-modal="ok"]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{ okModal.setAttribute('aria-hidden','true'); });
+    });
+
+    // Cerrar modal al hacer clic en backdrop
+    [contactModal, okModal].forEach(m=>{
+      m.addEventListener('click', (e)=>{ if(e.target === m){ m.setAttribute('aria-hidden','true'); }});
+    });
+
+    // Envío simulado con confirmación
+    const form = document.getElementById('contact-form');
+    const live = document.getElementById('live');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const sendBtn = document.getElementById('send');
+      sendBtn.disabled = true;
+      sendBtn.textContent = 'Enviando…';
+      live.textContent = 'Procesando el formulario';
+      setTimeout(()=>{
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Enviar consulta';
+        contactModal.setAttribute('aria-hidden','true');
+        okModal.setAttribute('aria-hidden','false');
+        const okBtn = okModal.querySelector('[data-close-modal="ok"]');
+        if(okBtn) okBtn.focus();
+        live.textContent = 'Consulta enviada correctamente';
+        form.reset();
+      }, 900);
+    });
+
+    // Mejora UX para enlaces del menú
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', ()=> {/* hook para menú móvil si se agrega */});
+    });
+  </script>
+</body>
+</html>
